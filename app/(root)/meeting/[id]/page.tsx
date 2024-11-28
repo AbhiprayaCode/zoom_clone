@@ -8,12 +8,14 @@ import MeetingRoom from '@/components/MeetingRoom';
 import { useGetCallById } from '@/hooks/useGetCallById';
 import Loader from '@/components/Loader';
 
-// If there's a specific PageProps type expected, ensure it's accurate and fix it here.
-interface PageProps {
-  params: { id: string };
+// Ensure this matches the expected type, without any unnecessary Promise wrapper
+interface MeetingPageProps {
+  params: {
+    id: string;
+  };
 }
 
-const Meeting: React.FC<PageProps> = ({ params: { id } }) => {
+const Meeting: React.FC<MeetingPageProps> = ({ params: { id } }) => {
   const { user, isLoaded } = useUser(); // eslint-disable-next-line @typescript-eslint/no-unused-vars
 
   const [isSetupComplete, setIsSetupComplete] = useState(false);
@@ -36,4 +38,4 @@ const Meeting: React.FC<PageProps> = ({ params: { id } }) => {
   );
 }
 
-export default Meeting
+export default Meeting;
