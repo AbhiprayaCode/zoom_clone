@@ -8,7 +8,7 @@ const metadata: Metadata = {
   icons: {
     icon: "/icons/logo.svg",
   }
-};
+} // eslint-disable-next-line @typescript-eslint/no-unused-vars
 
 const RootLayout = ({children}: {children: React.ReactNode}) => {
   return (

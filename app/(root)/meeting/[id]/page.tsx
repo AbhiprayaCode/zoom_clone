@@ -10,7 +10,7 @@ import Loader from '@/components/Loader';
 
 const Meeting = ({params: {id}}: {params: {id: string}}) => {
 
-  const { user, isLoaded } = useUser();
+  const { user, isLoaded } = useUser() // eslint-disable-next-line @typescript-eslint/no-unused-vars
 
   const [isSetupComplete, setIsSetupComplete] = useState(false)
   const { call, isCallLoading } = useGetCallById(id);
