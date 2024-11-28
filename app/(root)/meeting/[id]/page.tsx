@@ -8,14 +8,18 @@ import MeetingRoom from '@/components/MeetingRoom';
 import { useGetCallById } from '@/hooks/useGetCallById';
 import Loader from '@/components/Loader';
 
-const Meeting = ({params: {id}}: {params: {id: string}}) => {
+// If there's a specific PageProps type expected, ensure it's accurate and fix it here.
+interface PageProps {
+  params: { id: string };
+}
 
-  const { user, isLoaded } = useUser() // eslint-disable-next-line @typescript-eslint/no-unused-vars
+const Meeting: React.FC<PageProps> = ({ params: { id } }) => {
+  const { user, isLoaded } = useUser(); // eslint-disable-next-line @typescript-eslint/no-unused-vars
 
-  const [isSetupComplete, setIsSetupComplete] = useState(false)
+  const [isSetupComplete, setIsSetupComplete] = useState(false);
   const { call, isCallLoading } = useGetCallById(id);
 
-  if (!isLoaded || isCallLoading) return <Loader />
+  if (!isLoaded || isCallLoading) return <Loader />;
 
   return (
     <main className='h-screen w-full'>
@@ -29,7 +33,7 @@ const Meeting = ({params: {id}}: {params: {id: string}}) => {
         </StreamTheme>
       </StreamCall>
     </main>
-  )
+  );
 }
 
 export default Meeting
