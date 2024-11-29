@@ -51,8 +51,8 @@ const MobileNav = () => {
                                 <Link 
                                     href={link.route} 
                                     key={link.label} 
-                                    className={cn("flex gap-4 items-center p-4 rounded-lg w-full max-w-60", {
-                                        'bg-blue-1': isActive,
+                                    className={cn("flex gap-4 items-center p-4 rounded-lg w-full max-w-60 hover:bg-blue-1", {
+                                        'bg-blue-2': isActive,
                                     })}>
                             
                                 <Image

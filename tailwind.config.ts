@@ -20,13 +20,15 @@ const config = {
     extend: {
       colors: {
         dark: {
-          1: '#1C1F2E',
-          2: '#161925',
-          3: '#252A41',
-          4: '#1E2757',
+          1: '#000000',
+          2: '#161618',
+          3: '#212124',
+          4: '#666666',
+          5: '#0e0e0e'
         },
         blue: {
           1: '#0E78F9',
+          2: '#0088cc'
         },
         sky: {
           1: '#C9DDFF',
@@ -42,6 +44,16 @@ const config = {
         yellow: {
           1: '#F9A90E',
         },
+        green: {
+          1: '#76ABAE',
+          2: '#B4E380',
+          3: '#61b900',
+          4: '#b8dbdd',
+        },
+        grey: {
+          1: '#FFFFFF',
+          2: '#eeeeee',
+        }
       },
       keyframes: {
         'accordion-down': {

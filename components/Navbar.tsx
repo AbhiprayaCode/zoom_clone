@@ -6,7 +6,7 @@ import { SignedIn, UserButton } from '@clerk/nextjs'
 
 const Navbar = () => {
   return (
-    <nav className='flex-between fixed z-50 w-full ng-dark-1 px-6 py-4 lg:px-10'>
+    <nav className='flex-between fixed z-50 w-full bg-dark-1 px-6 py-4 lg:px-10'>
       <Link href={'/'} className='flex items-center gap-2'>
         <Image
           src='/icons/logo.svg'
@@ -15,10 +15,11 @@ const Navbar = () => {
           alt='logo'
           className='max-sm:size-10'
         />
-        <p className='text-[24px] font-extrabold text-white max-sm:hidden'>TechMeet</p>
+        <p className='text-[24px] font-extrabold text-white max-sm:hidden'>ChitChat <span className='text-grey-2 font-mono text-sm'>by TechPioneers</span></p>
       </Link> 
 
       <div className='flex-between gap-5'>
+        
         {/* Clerk - User Management */ }
         <SignedIn>
             <UserButton />

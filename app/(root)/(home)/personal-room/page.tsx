@@ -55,10 +55,10 @@ const PersonalRoom = () => {
      </div>
 
      <div className='flex gap-5'>
-      <Button className='bg-blue-1' onClick={startRoom}>
+      <Button className='bg-blue-2 hover:bg-blue-1' onClick={startRoom}>
         Start Meeting
       </Button>
-      <Button className='bg-dark-3' onClick={
+      <Button className='bg-dark-3 hover:bg-dark-2' onClick={
         () => {
           navigator.clipboard.writeText(meetingLink)
           toast.toast({
